@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Generator resume</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container" id="cv-form">
+   <h1 class="text-center my-2"> Resume Generator   </h1>
+     <p  class="text-center underline-h"> Hi please fill write information fullfield all index by grnerate cv    </p>
+      
+      <div class="row">
+
+         <div class="col-6">
+          <h2>Personal Information</h2>
+          <div class="from-group mt-2">
+             <label for="namefield">your name</label>
+             <input type="text" id="namefield" placeholder="enter here" class="from-control">
+          </div>
+          <div class="from-group mt-2">
+             <label for="contactfield">contact Phone</label>
+             <input type="text" id="contactfield" placeholder="enter here" class="from-control">
+          </div>
+          <div class="from-group mt-2">
+            <label for="emailfield">Email ID</label>
+            <input type="text" id="emailfield" placeholder="enter here" class="from-control">
+          </div>
+          <div class="from-group mt-2">
+             <label for="addressfield">Address</label>
+             <textarea row="5" type="text" id="addressfield" placeholder="enter here" class="from-control"></textarea> 
+          </div>
+          <div class="from-group mt-2">
+            <label for="pincodfield">pincode</label>
+            <input type="text" id="pincodfield" placeholder="enter here" class="from-control">
+          </div>
+         
+          <p class="test-secondary test-center my-2" > Improtant links  </p>
+          <div class="from-group mt-2">
+             <label for="fbfield">facebook link</label>
+             <input type="text" id="fbfield" placeholder="enter here" class="from-control"/>
+          </div>
+          <div class="from-group mt-2">
+             <label for="githubfield">github link</label>
+             <input type="text" id="githubfield" placeholder="enter here" class="from-control"/>
+          </div>
+          <div class="from-group mt-2">
+             <label for="linkedinfield">linkedin link</label>
+             <input type="text" id="linkedinfield" placeholder="enter here" class="from-control"/>
+          </div>
+        </div>
+
+         
+        <div class="col-md-6">
+         <!-- secound col...-->
+        <h2>Professional Information</h2>
+            <div class="form-group mt-2">
+               <label for="odjecctivefield">Objective</label> <br>
+               <textarea id="odjecctivefield"  row="5" type="text" placeholder="enter here" class="from-control"></textarea>
+            </div>
+            <div class="form-group mt-2" id="we">
+                <label for="workfield">Work Experience</label> <br>
+                <textarea id="workfield" row="5" type="text" placeholder="enter here" class="from-control wefield"></textarea>
+                
+                                    <!--this is a add button-->
+                  <div class="cantainer test-center mt-2" id="weaddbutton">
+                  <button onclick = "we()" class="btn btn-primary btn-sm"> Add </button>
+                  </div>
+            </div>
+          <div class="form-group mt-2" id="aq">
+                <label for="acadmicfield">Acadmic qualifecation </label> <br>
+                <textarea ib="acadmicfield"  row="3" type="text" placeholder="enter here" class="from-control aqfield"></textarea>
+                
+                                   <!--this is a add button-->
+                  <div class="cantainer test-center mt-2" ib="aqaddbutton">
+                  <button onclick = "aq()" class="btn btn-primary btn-sm"> Add </button>
+                  </div>
+            </div>
+         </div>
+     </div>
+     
+      <div class="container text-center mt-3">
+        <button onclick="generatecv()" class="btn  btn-primary btn-lg" >Generate Cv</button>
+      </div>
+
+  </div> <br> <hr>
+
+  <div class="container" id="cv-template">
+     <div class="row">
+         <div class="col-md-4 text-center py-5 background">
+          <!--first colume -->
+          <hr>
+          <img src="https://i.pinimg.com/originals/04/c7/8a/04c78a3bec46babab4a23e3e13091552.jpg" 
+               alt=""
+               class="img-fluid myimg"/>
+
+             <div class="container">
+                <p id="tname" >Employ name</p>
+                <p id="tphone" >phone no.(+910909090999.+919099499599)</p>
+                <p id="temail" >emailaddress studentname123@gmail.com</p>
+                <p id="taddress" >address houseno.,streetname,cityname,statename,countryname</p>
+                <p id="tpin" >pincode </p> <hr>
+                <p> 
+                    <a id="tfb" href="#1">https://www.facebook.com/shivamsoni</a>
+                    <a id="tgit" href="#1">https://www.github.com/codewithshivam</a>
+                    <a id="tlin" href="#1">https://www.linkedin.com/shivamsoni</a>
+                </p>
+             </div>
+         </div>
+         <div  class="col-md-8 text-center background1">
+           <!--second colume -->
+          <h1 id="boldname" class="test-center" style="font-weight:700">Candident name</h1>
+          
+          <div class="card mt-4 ">
+             <div class="hearder background">
+                <h3>Object</h3>
+             </div>
+             <div  id="tob" class="body">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta itaque minus laboriosam reiciendis libero omnis iusto repellendus expedita dolorum fugit ab at aperiam non laborum, ullam, ducimus rem cumque obcaecati!</p>
+             </div>
+          </div>
+          <div class="card mt-4 ">
+             <div class="hearder background">
+                <h3> Work Experience </h3>
+             </div>
+             <div  class="body">
+                <ul id="twe">
+                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.  ullam, ducimus rem cumque obcaecati!</li>
+                <li>Soluta itaque minus laboriosam reiciendis libero omnis iusto repellendus expedita dolorum fugit ab at aperiam non laborum,</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti amet dolorem quis ducimus illum, atque illo enim.</li>
+                </ul>
+             </div>
+          </div>
+          <div class="card mt-4 ">
+            <div class="hearder background" >
+               <h3>Acadmic Qualifecation</h3>
+            </div>
+            <div  class="body">
+               <ul id="tAQ" >
+                  <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                  <li>Soluta itaque minus laboriosam reiciendis libero omnis iusto repellendus expedita dolorum fugit ab at aperiam non laborum,</li>
+                  <li> ullam, ducimus rem cumque obcaecati!</li>
+               </ul>  
+            </div>
+            <div class="container mt-3 text-conter">
+               <button onclick="printcv()" colour="white"class="btn">Print Cv</button>
+            </div> 
+         </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="script.js" ></script>
+</body>
+</html>
